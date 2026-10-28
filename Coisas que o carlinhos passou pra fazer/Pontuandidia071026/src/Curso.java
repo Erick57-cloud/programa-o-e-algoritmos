@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 public class Curso{
     private int codigo;
     private int duracao;
@@ -8,6 +9,13 @@ public class Curso{
         this.cursonome = cursonome;
         this.duracao = duracao;
     }
+    public void exibirDados() {
+        JOptionPane.showMessageDialog(null,
+                "Informações do curso:"
+                        + "\nCurso: " + this.cursonome
+                        + "\nCódigo: " + this.codigo
+                        + "\nDuração: " + this.duracao + " anos");
+    }
     public int getCodigo(){
         return codigo;
     }
@@ -17,4 +25,5 @@ public class Curso{
     public String getCursonome(){
         return cursonome;
     }
+
 }
